@@ -6,11 +6,14 @@ import Dropdown from "./Dropdown"
 const CheckoutItem = (props) => {
 
   const adjustCart = (quantity) => {
-
-    adjustProductStock(quantity, props.info.id)
-    adjustProductCart(quantity, props.info.id)
-    // console.log(quantity)
-    // console.log(props.cart)
+    if(quantity<=props.getStock(props.info.id )){
+      adjustProductStock(quantity, props.info.id)
+      adjustProductCart(quantity, props.info.id)
+      // console.log(quantity)
+      // console.log(props.cart
+    }else{
+      alert("not enough stock")
+    }
 
   }
 

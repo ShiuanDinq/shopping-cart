@@ -54,7 +54,7 @@ const App = () => {
               <Product setStock={setStock} products={products} stock={stock} getStock={getStock} cart={cart} setCart={setCart}/>
             </Route>
             <Route exact path="/checkout">
-              <Checkout cart={cart} setCart={setCart} stock={stock} setStock={setStock} products={products} />
+              <Checkout cart={cart} setCart={setCart} stock={stock} setStock={setStock} products={products} getStock={getStock}/>
             </Route>
             <Route path="/">
               <Home products={products}/>
