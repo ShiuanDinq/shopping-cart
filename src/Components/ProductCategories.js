@@ -15,12 +15,12 @@ const ProductCategory = (props) => {
     ))
 
   return (
-    <section  class="section">
+    <div class="container"  style={{padding:"0.5rem"}}>
       <h1 class="is-size-2 has-text-weight-bold">
         {params.category}
       </h1>
-      <div className="columns is-multiline is-mobile">{category}</div>
-    </section>
+      <div className="columns is-1 is-variable is-multiline is-mobile">{category}</div>
+    </div>
 
 
   )

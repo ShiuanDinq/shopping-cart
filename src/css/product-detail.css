@@ -9,11 +9,13 @@
   flex-direction: column;
   justify-content:center;
   align-items:center;
+
 }
 
 
 .product-detail-img > img {
-  height: 70vh;
+  
+  height: 60%;
   object-fit: contain;
 }
 
