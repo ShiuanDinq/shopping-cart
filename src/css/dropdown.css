@@ -1,0 +1,41 @@
+/*------------------------------------dropdown-----------------------------------*/
+.drop{
+  width:8rem;
+  background-color: aquamarine;
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+
+.drop-head{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  height: 100%;
+  
+
+}
+
+.drop-content {
+  position: absolute;
+  z-index: 5;
+
+}
+
+.drop:hover > .drop-content > .drop-item{
+  display:block;
+}
+
+.drop-item{
+  display:none;
+  width:8rem;
+  padding: 0 0.5rem;
+  background-color: azure;
+  
+
+}
+
+.drop-item:hover{
+  background-color: darkgray;
+}
+

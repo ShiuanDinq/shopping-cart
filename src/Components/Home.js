@@ -47,12 +47,9 @@ const Home = (props) => {
         </div>
 
         <div class="column is-one-fifth has-text-centered" style={{display:"flex", flexDirection:"column" }}> 
-          <section class="has-background-danger" style={{width:"13rem"}}>
+          <section class="has-background-danger" style={{width:"100%"}}>
             <p class="is-size-3 has-text-weight-bold">
-              Crazy Deals!!!
-            </p>
-            <p class="is-size-4">
-              Don't miss out !
+              Crazy Deals
             </p>
           </section>
 

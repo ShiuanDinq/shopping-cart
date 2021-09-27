@@ -1,18 +1,18 @@
-
-import { faDirections } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react/cjs/react.development"
 import Dropdown from "./Dropdown"
-
+import NoStockPop from "./NoStockPop"
 
 const CheckoutItem = (props) => {
 
+  const [noStock, setNoStock] = useState(false)
+
   const adjustCart = (quantity) => {
-    if(quantity<=props.getStock(props.info.id )){
+    if(quantity<=props.getTotal(props.info.id)){
       adjustProductStock(quantity, props.info.id)
       adjustProductCart(quantity, props.info.id)
-      // console.log(quantity)
-      // console.log(props.cart
     }else{
-      alert("not enough stock")
+      setNoStock(true)
+      setTimeout(()=>{setNoStock(false)}, 1000)
     }
 
   }
@@ -101,6 +101,7 @@ const CheckoutItem = (props) => {
         <div className="drop-button" onClick={dropProduct}>x</div>
 
       </div>
+      <NoStockPop noStock={noStock}/>
 
 
     </div>

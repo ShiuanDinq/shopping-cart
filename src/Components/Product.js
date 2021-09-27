@@ -1,32 +1,31 @@
 import { useState , useEffect } from 'react'
 import { useParams } from 'react-router'
-import Item from './Item'
 import Dropdown from './Dropdown'
 import ItemAddedPop from './ItemAddedPop'
+import NoStockPop from './NoStockPop'
+
 
 const Product = (props) => {
 
-
   const params = useParams()
-  const selected = props.products.filter((item) => item.id == params.id)
-  const product = selected[0]
+  const product = props.products.filter((item)=> item.id==params.id)[0]
   const [quantity, setQuantity] = useState(1)
   const [addCart, setAddCart] = useState(false)
-  const [pressed, setPressed]  = useState(false)
+  const [noStock, setNoStock] = useState(false)
+
+
 
   const addToCart = (quantity, id) => {
-    if(quantity<=props.getStock(product.id )){
+    if(quantity<=props.getStock(params.id )){
       setAddCart(true)
-      setPressed(true)
       setTimeout(()=>{setAddCart(false)}, 1000)
       addProductCart(quantity, id)
       minusProductStock(quantity, id)
       console.log(props.cart)
     }else{
-      alert('stock insufficient')
+      setNoStock(true)
+      setTimeout(()=>{setNoStock(false)}, 1000)
     }
-
-
   }
 
   const addProductCart = (quantity, id) => {
@@ -62,47 +61,41 @@ const Product = (props) => {
     console.log(props.stock)
   }
 
-
-
-
-
-
-  const productCard = 
-  <div className="product card has-background-light columns" style={{padding:"1rem"}}>
-      <div class="is-one-third column">
-        <div style={{width:"100%", height:"100%", backgroundColor:"white", display:"flex", alignItems:"center", justifyContent:"center"}}>
-          <img src={product.image}/>
-        </div>
-
+  const productDetail = props.products.filter((item) => item.id == params.id).map((product) => (
+    <div className="card has-background-light columns product-detail" >
+      <div class="is-one-third column product-detail-img" >
+        <img src={product.image}/>
       </div>
-
-      <div class="is-half column">
-        <div class="product-content">
-          <p style={{fontSize:"2rem", fontWeight:"bold"}}>{product.title}</p>
-          <p className="is-size-6" style={{marginTop:"0.5rem" , height: "40%", overflow:"hidden"}}>{product.description}</p>
-          <p className="is-size-6 has-text-weight-bold">Stock: {props.getStock(product.id )}</p>
-          <div >       
-          </div>
+      <div class="is-two-third column product-detail-content" >
+        <div>
+          <p className="product-detail-title">{product.title}</p>
+          <p className="product-detail-description">{product.description}</p>  
+        </div>
+        
+        <div>
+          <p className="product-detail.stock is-size-6 has-text-weight-bold">Stock: {props.getStock(product.id )}</p>
           <Dropdown quantity={quantity} action={setQuantity}/>
-          <div class="submit-button" onClick={()=>{addToCart(quantity, params.id)}}>
+          <div class="submit-button" onClick={()=>addToCart(quantity, params.id)}>
             Add to cart
           </div>
         </div>
 
       </div>
+    </div>
 
-  </div>
+    ))
 
   return (
     <section class="section">
       <div class="container">
         <div class="columns is-centered">
           <div class="column ">
-            {productCard}
+            {productDetail}
           </div>
         </div>
       </div>
-      <ItemAddedPop addCart={addCart} pressed={pressed}/>
+      <ItemAddedPop addCart={addCart}/>
+      <NoStockPop noStock={noStock} />
     </section>
 
 

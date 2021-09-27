@@ -13,11 +13,11 @@ const Nav = () => {
   }
 
   return (
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation" style={{backgroundColor:"cornflowerblue"}}>
   <div class="navbar-brand">
     <Link to={'/'}>
       <div class="navbar-item fade">
-        <header class="is-size-2 has-text-primary has-text-weight-bold">RandomShop</header>
+        <header class="is-size-2 has-text-weight-bold" style={{color:"lightblue"}}>Storey</header>
       </div>
     </Link>
 
@@ -74,7 +74,7 @@ const Nav = () => {
 
     <div class="navbar-end">
       <div class="navbar-item">
-          <a class="button is-primary">
+          <a class="button" style={{backgroundColor:"lightblue"}}>
           <Link to={`/checkout`} onClick={(event) => {handleNav(); event.target.blur()}}>
             <div class="navbar-item" >
             <FontAwesomeIcon icon={faCartPlus}/>

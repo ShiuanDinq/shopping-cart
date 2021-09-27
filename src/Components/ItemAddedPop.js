@@ -3,7 +3,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 const ItemAddedPop = (props) => {
   return(
-    <div className={`popup ${props.addCart? "active":""} ${props.pressed?"pressed":""}`}>
+    <div className={`popup ${props.addCart? "active":""}`}>
       <FontAwesomeIcon icon={faCheckCircle} />
       <p>Added to cart</p>
     </div>

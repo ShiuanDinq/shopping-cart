@@ -21,9 +21,11 @@ const Checkout = (props) => {
     setItemNum(num)
   },[props.cart])
 
+  
+
 
   const checkout = props.cart.map((product) => 
-    <CheckoutItem info={product.info} num={product.cart} stock={props.stock} setStock={props.setStock} getStock={props.getStock} setCart={props.setCart} cart={props.cart}/>
+    <CheckoutItem info={product.info} num={product.cart} stock={props.stock} setStock={props.setStock} getStock={props.getStock} setCart={props.setCart} cart={props.cart} getTotal={props.getTotal}/>
   )
 
   const mess = props.cart.length===0? 

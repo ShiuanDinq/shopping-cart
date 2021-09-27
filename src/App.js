@@ -5,11 +5,15 @@ import Product from "./Components/Product"
 import Nav from "./Components/Nav"
 import ProductCategories from "./Components/ProductCategories"
 import Stock from "./Components/Stock"
-import './reset.css'
-import './styles.css'
+import './css/reset.css'
+import 'bulma/css/bulma.min.css';
+import './css/styles.css'
+import './css/slider.css'
+import './css/dropdown.css'
+import './css/product-detail.css'
 import { useState , useEffect } from 'react'
 import Checkout from "./Components/Checkout"
-import 'bulma/css/bulma.min.css';
+
 const App = () => {
 
   const [products, setProducts] = useState([])
@@ -36,6 +40,10 @@ const App = () => {
     return(stock.filter(item => item.id == id)[0].stock)
   }
 
+  const getTotal = (id) => {
+    return(stock.filter(item => item.id == id)[0].total)
+  }
+
 
 
 
@@ -54,7 +62,7 @@ const App = () => {
               <Product setStock={setStock} products={products} stock={stock} getStock={getStock} cart={cart} setCart={setCart}/>
             </Route>
             <Route exact path="/checkout">
-              <Checkout cart={cart} setCart={setCart} stock={stock} setStock={setStock} products={products} getStock={getStock}/>
+              <Checkout cart={cart} setCart={setCart} stock={stock} setStock={setStock} products={products} getStock={getStock} getTotal={getTotal}/>
             </Route>
             <Route path="/">
               <Home products={products}/>
