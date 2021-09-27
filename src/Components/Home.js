@@ -5,7 +5,7 @@ const Home = (props) => {
   var filteredProduct = sortedProduct.slice(0,3)
 
   const finalProduct = filteredProduct.map((product) => 
-      <Item product={product} addToCart={props.addToCart}/>
+      <Item product={product}  addToCart={props.addToCart}/>
   )
   return(
     <div>
@@ -46,14 +46,16 @@ const Home = (props) => {
           </div>
         </div>
 
-        <div class="column is-one-fifth has-text-centered" style={{display:"flex", flexDirection:"column" }}> 
+        <div class="column is-one-fifth has-text-centered" style={{display:"flex", flexDirection:"column" , }}> 
           <section class="has-background-danger" style={{width:"100%"}}>
             <p class="is-size-3 has-text-weight-bold">
               Crazy Deals
             </p>
           </section>
+          <div className="sales-content" style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", height:"100%", backgroundColor:"lightgrey", padding:"1rem"}}>
+            {finalProduct}
+          </div>
 
-          {finalProduct}
 
         </div>
       </div>

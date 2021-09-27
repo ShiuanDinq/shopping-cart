@@ -3,13 +3,13 @@
   color:lightblue;
 }
 
-.navbar-item > a:hover{
+/* .navbar-item > a:hover{
   color: rgb(233, 230, 39);
 }
 
 a.navbar-link:hover{
   color: rgb(233, 230, 39);
-}
+} */
 
 
 .navbar-burger {
@@ -39,7 +39,7 @@ a.navbar-link:hover{
   flex-direction:column;
   justify-content:space-between;
   padding: 0.5rem;
-  height: 20rem;
+  height: 18rem;
 }
 
 .product-card-image{
@@ -53,7 +53,7 @@ a.navbar-link:hover{
   width:100%;
   max-height:100%;
   object-fit:contain;
-  padding:1rem;
+  padding:0.5rem;
 }
 
 
@@ -135,6 +135,10 @@ a.navbar-link:hover{
   background-position:100% 100%;
 }
 
+.sales-content > *{
+  margin-bottom: 0.5rem;
+
+}
 
 @keyframes pressed {
   0%{
