@@ -79,11 +79,11 @@ const CheckoutItem = (props) => {
       })
     }
   return(
-    <div style={{padding:"1rem", borderBottom:"2px solid rgba(0,0,0,0.4)"}}className="columns card ">
-      <div class="column is-one-third">
+    <div style={{padding:"1rem", borderBottom:"2px solid rgba(0,0,0,0.4)", width:"100%"}}className="columns is-mobile card ">
+      <div class="column is-one-third" style={{display:'flex', flexDirection:"column", justifyContent:"center"}}>
         <img src={props.info.image} />
       </div>
-      <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between"}} class="is-two-third">
+      <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between", width:"100%"}} class="is-two-third">
         <div>
         <p style={{fontSize:"2rem"}}>{props.info.title}</p>
         <p style={{fontWeight:"bold"}}>RM {props.info.price}</p>

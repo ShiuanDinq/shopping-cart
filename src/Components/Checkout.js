@@ -42,9 +42,8 @@ const Checkout = (props) => {
 
   return(
 
-    <section class="section">
-      <div class="container">
-        <div class="columns">
+      <section class="section">
+        <div class="columns" style={{minHeight:"100vh", paddingTop:"5rem"}}>
           <div class="column is-half">
             
             {checkout}
@@ -62,8 +61,8 @@ const Checkout = (props) => {
             </div>
           </div>
         </div>  
-      </div>
-    </section>
+      </section>
+
 
   )
 

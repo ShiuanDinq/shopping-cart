@@ -86,17 +86,18 @@ const Product = (props) => {
     ))
 
   return (
-    <section class="section">
-      <div class="container">
-        <div class="columns is-centered">
+      <section class="section" >
+        <div class="columns is-centered" style={{paddingTop:"5rem", minHeight:"100vh"}}>
           <div class="column ">
             {productDetail}
           </div>
+          <ItemAddedPop addCart={addCart}/>
+          <NoStockPop noStock={noStock} />
         </div>
-      </div>
-      <ItemAddedPop addCart={addCart}/>
-      <NoStockPop noStock={noStock} />
-    </section>
+      </section>
+
+
+
 
 
   )

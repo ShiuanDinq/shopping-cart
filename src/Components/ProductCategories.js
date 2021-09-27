@@ -15,7 +15,7 @@ const ProductCategory = (props) => {
     ))
 
   return (
-    <div class="container"  style={{padding:"0.5rem"}}>
+    <div style={{padding:"0.5rem", minHeight:"100vh", paddingTop:"5rem"}}>
       <h1 class="is-size-2 has-text-weight-bold">
         {params.category}
       </h1>

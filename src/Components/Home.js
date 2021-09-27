@@ -12,7 +12,7 @@ const Home = (props) => {
       <Slider />
       <div class="columns section" >
         <div class="featured column is-four-fifth" style={{display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
-          <div style={{backgroundImage: `url(father.jpeg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"15rem"}} class="card section">
+          <div style={{backgroundImage: `url(father.jpeg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"12rem"}} class="card section">
             <p class="is-size-4 has-text-black has-text-weight-bold">
               Struggling to find a gift?
             </p>
@@ -20,7 +20,7 @@ const Home = (props) => {
               Check out our selections!
             </p>
           </div>
-          <div style={{backgroundImage: `url(wardrobe.jpg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"15rem"}} class="card section">
+          <div style={{backgroundImage: `url(wardrobe.jpg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"12rem"}} class="card section">
             <p class="is-size-4 has-text-black has-text-weight-bold">
               Mix and Match
             </p>
@@ -28,7 +28,7 @@ const Home = (props) => {
               Bring out your style
             </p>
           </div>
-          <div style={{backgroundImage: `url(electronics.jpg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"15rem"}} class="card section">
+          <div style={{backgroundImage: `url(electronics.jpg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"12rem"}} class="card section">
             <p class="is-size-4 has-text-white has-text-weight-bold">
               Trending Electronics
             </p>
@@ -36,7 +36,7 @@ const Home = (props) => {
               Check out our guide for the best buys
             </p>
           </div>
-          <div style={{backgroundImage: `url(lovers.jpg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"15rem"}} class="card section">
+          <div style={{backgroundImage: `url(lovers.jpg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"12rem"}} class="card section">
             <p class="is-size-4 has-text-white has-text-weight-bold">
               Love is in the air
             </p>

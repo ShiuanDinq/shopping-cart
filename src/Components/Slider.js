@@ -55,6 +55,7 @@ const Slider = () => {
 
 
   return(
+    <div style={{paddingTop:"5rem"}}>
     <div style={{position:"relative"}} class="slide-container ">
 
       <div className="slide-content" style={{position:"absolute"}}>
@@ -66,6 +67,7 @@ const Slider = () => {
       {slideButtons}
       </div>
 
+    </div>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import Home from "./Components/Home"
 import Products from "./Components/Products"
 import Product from "./Components/Product"
 import Nav from "./Components/Nav"
+import Footer from "./Components/Footer"
 import ProductCategories from "./Components/ProductCategories"
 import Stock from "./Components/Stock"
 import './css/reset.css'
@@ -68,6 +69,7 @@ const App = () => {
               <Home products={products}/>
             </Route>
           </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
 

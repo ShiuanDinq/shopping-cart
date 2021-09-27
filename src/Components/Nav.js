@@ -2,7 +2,7 @@ import { Link} from 'react-router-dom'
 import React from 'react';
 import { useState , useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus} from '@fortawesome/free-solid-svg-icons'
+import { faCartPlus, faMeteor} from '@fortawesome/free-solid-svg-icons'
 
 
 const Nav = () => {
@@ -13,11 +13,12 @@ const Nav = () => {
   }
 
   return (
-    <nav class="navbar" role="navigation" aria-label="main navigation" style={{backgroundColor:"cornflowerblue"}}>
+    <nav class="navbar" role="navigation" aria-label="main navigation" style={{backgroundColor:"cornflowerblue" ,position:"fixed", width:"100%", height:"5rem"}}>
   <div class="navbar-brand">
     <Link to={'/'}>
-      <div class="navbar-item fade">
-        <header class="is-size-2 has-text-weight-bold" style={{color:"lightblue"}}>Storey</header>
+      <div class="navbar-item fade " style={{display:"flex", flexDirection:"column", position:"relative"}}>
+        <header class="is-size-2 has-text-weight-bold" style={{color:"lightblue"}}>Impact<FontAwesomeIcon icon={faMeteor}/></header>
+        <p style={{fontSize:"0.8rem", fontWeight:"bold", color:"white", position:"absolute", bottom: 0}}>fashion concept store</p>
       </div>
     </Link>
 
