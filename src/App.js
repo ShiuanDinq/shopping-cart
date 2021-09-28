@@ -7,14 +7,10 @@ import Footer from "./Components/Footer"
 import ProductCategories from "./Components/ProductCategories"
 import Stock from "./Components/Stock"
 import ScrollToTop from "./Components/ScrollToTop"
-import './css/reset.css'
-import 'bulma/css/bulma.min.css';
-import './css/styles.css'
-import './css/slider.css'
-import './css/dropdown.css'
-import './css/product-detail.css'
-import { useState , useEffect } from 'react'
 import Checkout from "./Components/Checkout"
+import './css/styles.css'
+import { useState , useEffect } from 'react'
+
 
 const App = () => {
 

@@ -1,0 +1,55 @@
+@keyframes pressed {
+  0%{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100%{
+    opacity: 0.5;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+
+  }
+
+  100%{
+    opacity: 1;
+
+  }
+}
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+
+  }
+
+  100%{
+    opacity: 0;
+
+  }
+}
+
+@keyframes shiftUp {
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slideLeft {
+  0%{
+    transform: translateX(50px);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,25 @@
+/*------------------------popup------------------------------*/
+.popup{
+  color: white;
+  background-color: black;
+  background-color:rgba(0,0,0,0.4);
+  width:40%;
+  position:fixed;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:3rem;
+  display: none;
+  border-radius: 1rem;
+  z-index: 3;
+}
+
+
+
+.popup.active{
+  display:flex;
+  animation: fadeIn 1s forwards ease-in-out;
+}

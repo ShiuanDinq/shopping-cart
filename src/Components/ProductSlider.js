@@ -52,23 +52,20 @@ const ProductSlider = (props) => {
   var sortedProduct = props.products.sort(function(a, b){return a.price - b.price});
   var filteredProduct = sortedProduct.slice(0,15)
   const finalProduct = filteredProduct.map((product, index) => 
-  <div class={`is-one-fifth-desktop is-one-third-mobile column psliderItem${activeNum.includes(index)? "active":""}`} >
-      <Item product={product} addToCart={props.addToCart}/>   
-  </div>
-
-  
-
+    <div class={`is-one-fifth-desktop is-one-third-mobile column psliderItem${activeNum.includes(index)? "active":""}`} >
+        <Item product={product} addToCart={props.addToCart}/>   
+    </div>
   )
 
   return(
     <div class="card has-background-light">
       <p className="is-size-5-desktop has-text-weight-bold" style={{margin:"1rem", color:"lightsalmon"}}>TRENDING PRODUCTS</p>
-    <div class="columns is-mobile card is-gapless" style={{position:"relative"}}>
-      <FontAwesomeIcon icon={faChevronCircleLeft} class={`psliderMinus ${activeIndex>0? "active":""}`} onClick={decreaseActiveIndex} style={{width:"3rem"}}/>
-      <FontAwesomeIcon icon={faChevronCircleRight} class={`psliderPlus ${activeIndex<max? "active":""}`} onClick={increaseActiveIndex} style={{width:"3rem"}}/>
-      {finalProduct}
+      <div class="columns is-mobile card is-gapless" style={{position:"relative"}}>
+        <FontAwesomeIcon icon={faChevronCircleLeft} class={`psliderMinus ${activeIndex>0? "active":""}`} onClick={decreaseActiveIndex} style={{width:"3rem"}}/>
+        <FontAwesomeIcon icon={faChevronCircleRight} class={`psliderPlus ${activeIndex<max? "active":""}`} onClick={increaseActiveIndex} style={{width:"3rem"}}/>
+        {finalProduct}
 
-    </div>
+      </div>
     </div>
 
   )

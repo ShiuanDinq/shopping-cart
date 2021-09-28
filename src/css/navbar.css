@@ -1,0 +1,23 @@
+/*------------------------navbar--------------------*/
+.navbar-item > a{
+  color:cyan;
+}
+
+.navbar-item > a:hover{
+  color: rgb(41, 182, 182)
+}
+
+a.navbar-link:hover{
+  color: rgb(41, 182, 182)
+}
+
+
+.navbar-burger {
+  align-self: center;
+}
+
+.fa-cart-plus{
+  font-size: 2rem;
+  padding:0 0.2rem;
+}
+

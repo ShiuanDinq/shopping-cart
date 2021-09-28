@@ -21,7 +21,6 @@ const Product = (props) => {
       setTimeout(()=>{setAddCart(false)}, 1000)
       addProductCart(quantity, id)
       minusProductStock(quantity, id)
-      console.log(props.cart)
     }else{
       setNoStock(true)
       setTimeout(()=>{setNoStock(false)}, 1000)
@@ -86,20 +85,15 @@ const Product = (props) => {
     ))
 
   return (
-      <section class="section" >
-        <div class="columns is-centered" style={{paddingTop:"5rem", minHeight:"100vh"}}>
-          <div class="column ">
-            {productDetail}
-          </div>
-          <ItemAddedPop addCart={addCart}/>
-          <NoStockPop noStock={noStock} />
+    <section class="section" >
+      <div class="columns is-centered" style={{paddingTop:"5rem", minHeight:"100vh"}}>
+        <div class="column ">
+          {productDetail}
         </div>
-      </section>
-
-
-
-
-
+        <ItemAddedPop addCart={addCart}/>
+        <NoStockPop noStock={noStock} />
+      </div>
+    </section>
   )
 }
 

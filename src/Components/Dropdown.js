@@ -19,16 +19,16 @@ const Dropdown = (props) => {
         <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={() => {props.action(1); handleExpand()}}>
           1
         </div>
-        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={(event) => {props.action(2); handleExpand()}}>
+        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={() => {props.action(2); handleExpand()}}>
           2
         </div>
-        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={(event) => {props.action(3); handleExpand()}}>
+        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={() => {props.action(3); handleExpand()}}>
           3
         </div>
-        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={(event) => {props.action(4); handleExpand()}}>
+        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={() => {props.action(4); handleExpand()}}>
           4
         </div>
-        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={(event) => {props.action(5); handleExpand()}}>
+        <div class="drop-item is-size-5-desktop is-size-7-mobile" onClick={() => {props.action(5); handleExpand()}}>
           5
         </div>
       </div>

@@ -14,19 +14,14 @@ const CheckoutItem = (props) => {
       setNoStock(true)
       setTimeout(()=>{setNoStock(false)}, 1000)
     }
-
   }
 
   const dropProduct = () => {
     restoreProductStock(props.info.id)
     dropProductCart(props.info.id)
-    console.log(props.cart)
-
-
   }
 
-  const restoreProductStock = (id) => {
-  
+  const restoreProductStock = (id) => {  
     props.setStock((prevState) => {  
       const newStock = prevState.map((product) => {
         if(product.id == id){
@@ -37,7 +32,6 @@ const CheckoutItem = (props) => {
       }) 
       return(newStock)
     })  
-    console.log(props.stock)
   }
 
   const dropProductCart = (id) => {
@@ -47,13 +41,9 @@ const CheckoutItem = (props) => {
     })
   }
 
-  
-
-  const adjustProductStock = (quantity, id) => {
-  
+  const adjustProductStock = (quantity, id) => { 
     props.setStock((prevState) => {  
-      const newStock = prevState.map((product) => {
-        
+      const newStock = prevState.map((product) => {     
         if(product.id == id){
           return({id:product.id, total:product.total, stock:product.total-quantity})
         }else{
@@ -62,48 +52,46 @@ const CheckoutItem = (props) => {
       }) 
       return(newStock)
     })  
-    console.log(props.stock)
   }
 
   const adjustProductCart = (quantity, id) => {
+    props.setCart((prevState) => { 
+      const newCart = prevState.map((item) => {
+        if(item.id == id){
+          return({id:item.id, info:item.info, cart:quantity})
+        }else{
+          return(item)
+        }
+      }) 
+      return(newCart)
+    })
+  }
 
-      props.setCart((prevState) => { 
-        const newCart = prevState.map((item) => {
-          if(item.id == id){
-            return({id:item.id, info:item.info, cart:quantity})
-          }else{
-            return(item)
-          }
-        }) 
-        return(newCart)
-      })
-    }
+
   return(
-    <div style={{padding:"1rem", borderBottom:"2px solid rgba(0,0,0,0.4)", width:"100%"}}className="columns is-mobile card ">
-      <div class="column is-one-third" style={{display:'flex', flexDirection:"column", justifyContent:"center"}}>
+    <div className="columns is-mobile card checkout-card">
+      <div class="column is-one-third checkout-card-image">
         <img src={props.info.image} />
       </div>
-      <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between", width:"100%"}} class="is-two-third">
-        <div>
-        <p className="is-size-4-desktop is-size-6-mobile has-text-weight-bold">{props.info.title}</p>
-        <p className="is-size-5-desktop is-size-7-mobile">RM {props.info.price}</p>
 
+      <div class="is-two-third checkout-card-content">
+        <div>
+          <p className="is-size-4-desktop is-size-6-mobile has-text-weight-bold">{props.info.title}</p>
+          <p className="is-size-5-desktop is-size-7-mobile">RM {props.info.price}</p>
         </div>
 
         <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
           <div>
-          <p className="is-size-5-desktop is-size-7-mobile">quantity</p>
-        <Dropdown quantity={props.num} action={adjustCart}/>
+            <p className="is-size-5-desktop is-size-7-mobile">quantity</p>
+            <Dropdown quantity={props.num} action={adjustCart}/>
           </div>
 
-        <p className="is-size-6-desktop is-size-7-mobile">SUBTOTAL: <p className="is-size-4-desktop is-size-7-mobile">RM {props.info.price*props.num}</p> </p>
+          <p className="is-size-6-desktop is-size-7-mobile">SUBTOTAL: <p className="is-size-4-desktop is-size-7-mobile">RM {props.info.price*props.num}</p> </p>
         </div>
-        <div className="drop-button" onClick={dropProduct}>x</div>
 
+        <div className="drop-button" onClick={dropProduct}>x</div>
       </div>
       <NoStockPop noStock={noStock}/>
-
-
     </div>
   )
 }

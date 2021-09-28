@@ -1,12 +1,11 @@
 import Slider from "./Slider"
-import Item from "./Item"
 import ProductSlider from "./ProductSlider";
 
 const Home = (props) => {
 
 
   return(
-    <div  style={{width:"100vw"}}>
+    <div style={{width:"100vw"}}>
       <Slider />
       <div class="columns" style={{ marginTop:"0.5rem"}}>
         <div class="featured column is-four-fifth" style={{display:"flex", flexDirection:"column", justifyContent:"flex-start"}}>

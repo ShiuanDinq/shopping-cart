@@ -1,0 +1,29 @@
+.drop-button{
+  cursor:pointer;
+  width:2rem;
+  height:2rem;
+  text-align:center;
+  position:absolute;
+  right:0;
+  top:0;
+  opacity:0.5; 
+}
+
+.checkout-card{
+  padding:1rem; 
+  border-bottom:2px solid rgba(0,0,0,0.4);
+  width:100%;
+}
+
+.checkout-card-image{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.checkout-card-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:100%;
+}

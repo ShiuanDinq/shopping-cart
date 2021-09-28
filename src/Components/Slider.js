@@ -38,7 +38,6 @@ const Slider = () => {
 
   var slide = SlideDetails.map((detail, index) => 
     <SlideItem num={index} activeIndex={activeIndex} title={detail.title} content={detail.content} background={detail.background}/>
-  
   )
 
   var slideButtons = SlideDetails.map((detail, index) =>
@@ -56,18 +55,16 @@ const Slider = () => {
 
   return(
     <div style={{paddingTop:"5rem"}}>
-    <div style={{position:"relative"}} class="slide-container card">
-
-      <div className="slide-content" style={{position:"absolute"}}>
-        {slide}
+      <div style={{position:"relative"}} class="slide-container card">
+        <div className="slide-content" style={{position:"absolute"}}>
+          {slide}
+        </div>
+        <FontAwesomeIcon icon={faAngleLeft} onClick={goToPrevSlide}/>
+        <FontAwesomeIcon icon={faAngleRight} onClick={goToNextSlide}/>
+        <div className="slideButtonsContainer">
+        {slideButtons}
+        </div>
       </div>
-      <FontAwesomeIcon icon={faAngleLeft} onClick={goToPrevSlide}/>
-      <FontAwesomeIcon icon={faAngleRight} onClick={goToNextSlide}/>
-      <div className="slideButtonsContainer">
-      {slideButtons}
-      </div>
-
-    </div>
     </div>
   )
 }
