@@ -1,7 +1,12 @@
 /*------------------------------------dropdown-----------------------------------*/
 .drop{
-  background-color: aquamarine;
+
   width:4rem;
+
+}
+
+.drop:hover{
+  cursor:pointer;
 }
 
 .drop-head{
@@ -9,30 +14,30 @@
   justify-content: space-between;
   padding: 0 0.5rem;
   height: 100%;
-  
+  background-color: aquamarine;
+
 
 }
 
 .drop-content {
   position: absolute;
   z-index: 5;
+  display:none;
 
 }
 
-.drop:hover > .drop-content > .drop-item{
-  display:block;
+.drop-content.active{
+  display:block
 }
+
+
 
 .drop-item{
-  display:none;
+  /* display:none; */
   padding: 0 0.5rem;
   background-color: azure;
   width:4rem;
 
-
 }
 
-.drop-item:hover{
-  background-color: darkgray;
-}
 
