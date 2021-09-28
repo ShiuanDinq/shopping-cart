@@ -142,8 +142,7 @@ a.navbar-link:hover{
   justify-content: center;
   align-items: center;
   padding:3rem;
-  opacity: 0;
-  display: flex;
+  display: none;
   border-radius: 1rem;
   z-index: 3;
 }
