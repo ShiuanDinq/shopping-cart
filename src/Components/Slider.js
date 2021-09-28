@@ -56,7 +56,7 @@ const Slider = () => {
 
   return(
     <div style={{paddingTop:"5rem"}}>
-    <div style={{position:"relative"}} class="slide-container ">
+    <div style={{position:"relative"}} class="slide-container card">
 
       <div className="slide-content" style={{position:"absolute"}}>
         {slide}

@@ -2,7 +2,7 @@ export default [
   {
     title:"Store wide promotion",
     content:"up to 90% discount",
-    background:"sale.jpeg"
+    background:"bfriday.jpg"
   },
   {
     title:"Spring is here!",

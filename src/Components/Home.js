@@ -1,17 +1,15 @@
 import Slider from "./Slider"
-import Item from "./Item";
-const Home = (props) => {
-  var sortedProduct = props.products.sort(function(a, b){return a.price - b.price});
-  var filteredProduct = sortedProduct.slice(0,3)
+import Item from "./Item"
+import ProductSlider from "./ProductSlider";
 
-  const finalProduct = filteredProduct.map((product) => 
-      <Item product={product}  addToCart={props.addToCart}/>
-  )
+const Home = (props) => {
+
+
   return(
-    <div>
+    <div  style={{width:"100vw"}}>
       <Slider />
-      <div class="columns section" >
-        <div class="featured column is-four-fifth" style={{display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
+      <div class="columns" style={{ marginTop:"0.5rem"}}>
+        <div class="featured column is-four-fifth" style={{display:"flex", flexDirection:"column", justifyContent:"flex-start"}}>
           <div style={{backgroundImage: `url(father.jpeg)` ,backgroundSize:"cover" ,backgroundPosition:'center', height:"12rem"}} class="card section">
             <p class="is-size-4 has-text-black has-text-weight-bold">
               Struggling to find a gift?
@@ -45,20 +43,8 @@ const Home = (props) => {
             </p>
           </div>
         </div>
-
-        <div class="column is-one-fifth has-text-centered" style={{display:"flex", flexDirection:"column" , }}> 
-          <section class="has-background-danger" style={{width:"100%"}}>
-            <p class="is-size-3 has-text-weight-bold">
-              Crazy Deals
-            </p>
-          </section>
-          <div className="sales-content" style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", height:"100%", backgroundColor:"lightgrey", padding:"1rem"}}>
-            {finalProduct}
-          </div>
-
-
-        </div>
       </div>
+      <ProductSlider products={props.products} />
     </div>
   )
 }

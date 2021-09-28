@@ -1,15 +1,15 @@
 /*------------------------navbar--------------------*/
 .navbar-item > a{
-  color:lightblue;
+  color:cyan;
 }
 
-/* .navbar-item > a:hover{
-  color: rgb(233, 230, 39);
+.navbar-item > a:hover{
+  color: rgb(41, 182, 182)
 }
 
 a.navbar-link:hover{
-  color: rgb(233, 230, 39);
-} */
+  color: rgb(41, 182, 182)
+}
 
 
 .navbar-burger {
@@ -24,7 +24,7 @@ a.navbar-link:hover{
 
 
 .featured > * + * {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 
@@ -41,7 +41,7 @@ a.navbar-link:hover{
 .moreinfo {
   width:100%;
   height:12%;
-  background-color:orange;
+  background-color:lightsalmon;
   position:absolute;
   opacity:0;
   z-index:5;
@@ -70,7 +70,7 @@ a.navbar-link:hover{
 
 .product-card-container:hover .product-card{
   animation: shiftUp 0.1s forwards ease-in-out;
-  border: 2px solid orange;
+  border: 2px solid lightsalmon;
 }
 
 .product-card-container:hover .moreinfo{
@@ -179,6 +179,60 @@ a.navbar-link:hover{
 
 }
 
+.psliderItem{
+  display:none;
+  opacity: 0;
+  animation: slideLeft 2s forwards ease-in-out;
+
+}
+
+.psliderItem.active {
+  opacity: 1;
+  display:flex;
+
+}
+
+.psliderPlus{
+
+  position:absolute;
+  z-index:3;
+  right:0;
+  bottom:50%;
+  display:none;
+  color:lightsalmon;
+  cursor: pointer;
+}
+
+.psliderPlus.active {
+
+  display:block;
+}
+
+.psliderPlus:active{
+  transform: scale(1.2);
+  opacity: 0.7;
+
+}
+
+.psliderMinus:active{
+  transform: scale(1.2);
+  opacity: 0.7;
+
+}
+.psliderMinus{
+  position:absolute;
+  z-index:3;
+  left:0;
+  bottom:50%;
+  display: none;
+  color:lightsalmon;
+  cursor: pointer;
+}
+
+.psliderMinus.active {
+  display: block;
+}
+
 @keyframes pressed {
   0%{
     opacity: 1;
@@ -222,6 +276,16 @@ a.navbar-link:hover{
 
   100%{
     transform: translateY(-5px);
+  }
+}
+
+@keyframes slideLeft {
+  0%{
+    transform: translateX(50px);
+  }
+
+  100%{
+    transform: translateX(0);
   }
 }
 

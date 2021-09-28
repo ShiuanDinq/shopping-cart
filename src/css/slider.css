@@ -3,10 +3,12 @@
   display: none;
   height: 100%;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   animation: fade 1s forwards ease-in-out;
   padding: 2rem;
+  padding-bottom: 50px;
+  padding-right:50px;
   
 
 }
@@ -41,31 +43,34 @@
 
 .fa-angle-left {
   font-size: 2rem;
-  color: aqua;
+  color: cyan;
   position:absolute;
   left:1rem; 
   top: 50%;
   transform: translate(0, -50%);
+  cursor: pointer;
 }
 
 .fa-angle-right{
   font-size: 2rem;
-  color: aqua;
+  color: cyan;
   position:absolute;
   right:1rem;
   top: 50%;
   transform: translate(0, -50%);
+  cursor: pointer;
 }
 
 .dot {
-  height: 0.8rem;
-  width: 0.8rem;
-  opacity: 0.5;
-  background-color: #bbb;
+  height: 0.5rem;
+  width: 0.5rem;
+  opacity: 0.8;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   display: inline-block;
 }
 
 .dot.active{
-  opacity: 1;
+  background-color: cyan;
+  opacity:1;
 }

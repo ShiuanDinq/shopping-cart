@@ -6,6 +6,7 @@ import Nav from "./Components/Nav"
 import Footer from "./Components/Footer"
 import ProductCategories from "./Components/ProductCategories"
 import Stock from "./Components/Stock"
+import ScrollToTop from "./Components/ScrollToTop"
 import './css/reset.css'
 import 'bulma/css/bulma.min.css';
 import './css/styles.css'
@@ -21,6 +22,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [cart, setCart] = useState([]) 
   const [stock, setStock] = useState(Stock)
+
 
 
   const fetchProducts = async () => {
@@ -52,6 +54,7 @@ const App = () => {
     <div style={{minHeight:"100vh", backgroundColor:"lightblue"}} className="App">
       <BrowserRouter>
         <Nav />
+        <ScrollToTop/>
           <Switch>
             <Route exact path="/products">
               <Products products={products} />

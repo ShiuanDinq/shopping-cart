@@ -15,10 +15,9 @@ const ProductCategory = (props) => {
     ))
 
   return (
-    <div style={{padding:"0.5rem", minHeight:"100vh", paddingTop:"5rem"}}>
-      <h1 class="is-size-2 has-text-weight-bold">
-        {params.category}
-      </h1>
+    <div className="card" style={{padding:"0.5rem", minHeight:"100vh", paddingTop:"5rem"}}>
+       <h2 style={{padding:"1rem 0"}} className="is-size-3-desktop is-size-4-mobile is-capitalized">{params.category}</h2>
+
       <div className="columns is-1 is-variable is-multiline is-mobile">{category}</div>
     </div>
 

@@ -42,7 +42,7 @@ const Checkout = (props) => {
 
   return(
 
-      <section class="section">
+      <section class="section card">
         <div class="columns" style={{minHeight:"100vh", paddingTop:"5rem"}}>
           <div class="column is-half">
             

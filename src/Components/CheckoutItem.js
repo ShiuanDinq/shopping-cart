@@ -85,18 +85,18 @@ const CheckoutItem = (props) => {
       </div>
       <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between", width:"100%"}} class="is-two-third">
         <div>
-        <p style={{fontSize:"2rem"}}>{props.info.title}</p>
-        <p style={{fontWeight:"bold"}}>RM {props.info.price}</p>
+        <p className="is-size-4-desktop is-size-6-mobile has-text-weight-bold">{props.info.title}</p>
+        <p className="is-size-5-desktop is-size-7-mobile">RM {props.info.price}</p>
 
         </div>
 
         <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
           <div>
-          <p>quantity</p>
+          <p className="is-size-5-desktop is-size-7-mobile">quantity</p>
         <Dropdown quantity={props.num} action={adjustCart}/>
           </div>
 
-        <p style={{fontSize:"0.8rem", fontWeight:"bold"}}>SUBTOTAL: <p style={{fontSize:"1.2rem", fontWeight:"bolder"}}>RM {props.info.price*props.num}</p> </p>
+        <p className="is-size-6-desktop is-size-7-mobile">SUBTOTAL: <p className="is-size-4-desktop is-size-7-mobile">RM {props.info.price*props.num}</p> </p>
         </div>
         <div className="drop-button" onClick={dropProduct}>x</div>
 
